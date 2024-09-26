@@ -1,6 +1,6 @@
 package patterns.Observer.interfaces;
 
-public interface Sujeto {
-    void addObserver(Observador o);
+public interface Subject {
+    void addObserver(Observer o);
     boolean notifyObservers();
 }

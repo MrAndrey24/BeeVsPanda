@@ -44,11 +44,11 @@ public class PoweUpMover extends Thread {
 
             String decorador = "";
             if (powerUps.getImagePath().equals("images//Frutas//1.png"))
-                decorador = gb.gestorDecorador.tipoFruta("Manzana");
+                decorador = gb.gestorDecorador.typeFruit("Manzana");
             if (powerUps.getImagePath().equals("images//Frutas//2.png"))
-                decorador = gb.gestorDecorador.tipoFruta("Banano");
+                decorador = gb.gestorDecorador.typeFruit("Banano");
             if (powerUps.getImagePath().equals("images//Frutas//3.png"))
-                decorador = gb.gestorDecorador.tipoFruta("Uva");
+                decorador = gb.gestorDecorador.typeFruit("Uva");
 
             switch (decorador) {
                 case "Vida":
@@ -73,13 +73,13 @@ public class PoweUpMover extends Thread {
             String tipo = "";
             switch ((int) ((Math.random() * 3) + 1)) {//Create random fruits
                 case 1://
-                    tipo = gb.gestorCreacional.procesarFuncion(1);
+                    tipo = gb.gestorCreacional.processFunction(1);
                     break;
                 case 2://
-                    tipo = gb.gestorCreacional.procesarFuncion(2);
+                    tipo = gb.gestorCreacional.processFunction(2);
                     break;
                 case 3://
-                    tipo = gb.gestorCreacional.procesarFuncion(3);
+                    tipo = gb.gestorCreacional.processFunction(3);
                     break;
             }
 

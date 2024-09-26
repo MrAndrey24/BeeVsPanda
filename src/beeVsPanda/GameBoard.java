@@ -1,8 +1,8 @@
 package beeVsPanda;
 
-import patterns.decorator.principal.Gestor_Decorador;
-import patterns.abstract_factory.principal.Gestor_Fabrica;
-import patterns.Observer.principal.Gestor_Observador;
+import patterns.decorator.principal.Decorator_Manager;
+import patterns.abstract_factory.principal.Factory_Manager;
+import patterns.Observer.principal.Observer_Manager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,9 +26,9 @@ public class GameBoard extends JPanel implements KeyListener {
 	Bullet[] bullets = new Bullet[100];
 	int bulletCount = 0;
 	static int score = 0;
-	public Gestor_Fabrica gestorCreacional = new Gestor_Fabrica();
-	public Gestor_Decorador gestorDecorador = new Gestor_Decorador();
-	public Gestor_Observador gestorObservador = new Gestor_Observador();
+	public Factory_Manager gestorCreacional = new Factory_Manager();
+	public Decorator_Manager gestorDecorador = new Decorator_Manager();
+	public Observer_Manager gestorObservador = new Observer_Manager();
 
 	private int life = 3;
 	public boolean loser = false;

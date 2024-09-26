@@ -45,7 +45,7 @@ public class BulletFiring extends Thread {
 			if(bulletRect.intersects(beeRect) == true){
 				GameBoard.score++;
 				GameBoard.score = 9 + GameBoard.score; //for getting 10 points after shooting a bee
-				if(gb.gestorObservador.verificador(gb.score)) {
+				if(gb.gestorObservador.verifier(gb.score)) {
 					gb.setLife(5);
 					gb.loser= true;
 				}

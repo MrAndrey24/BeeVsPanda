@@ -1,13 +1,13 @@
 package patterns.Observer.concrete;
 
-import patterns.Observer.interfaces.Observador;
-import patterns.Observer.interfaces.Sujeto;
+import patterns.Observer.interfaces.Observer;
+import patterns.Observer.interfaces.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Osos implements Sujeto {
-    private List<Observador> observers = new ArrayList<Observador>();
+public class Bear implements Subject {
+    private List<Observer> observers = new ArrayList<Observer>();
     private int value;
 
     public int getValue() {
@@ -20,14 +20,14 @@ public class Osos implements Sujeto {
     }
 
     @Override
-    public void addObserver(Observador o) {
+    public void addObserver(Observer o) {
         this.observers.add(o);
     }
 
     @Override
     public boolean notifyObservers() {
-        for (Observador ob : observers) {
-            return ob.verificarCantidad(getValue());
+        for (Observer ob : observers) {
+            return ob.verifyQuantity(getValue());
         }
         return false;
     }
